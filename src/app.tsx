@@ -8,15 +8,16 @@ const me = {
     lastName: 'Harvey'
 };
 
-// const formatName = (name: Name) => `${name.firstName} ${name.lastName}`;
-function formatName(name: Name) {
-    return name.firstName + ' ' + name.lastName;
+const formatName = (name: Name) => `${name.firstName} ${name.lastName}`;
+
+function Name(props: { who: Name }) {
+    return React.createElement('div', { className: 'greeting' },
+        'Hello ',
+        formatName(me)
+    );
 }
 
 ReactDOM.render(
-    React.createElement('div', {className: 'greeting'},
-        'Hello ',
-        formatName(me)
-    ),
+    Name({ who: me }),
     document.getElementById('app-root')
 );
