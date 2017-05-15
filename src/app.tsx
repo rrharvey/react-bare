@@ -10,14 +10,13 @@ const me = {
 
 const formatName = (name: Name) => `${name.firstName} ${name.lastName}`;
 
-function Name(props: { who: Name }) {
-    return React.createElement('div', { className: 'greeting' },
-        'Hello ',
-        formatName(me)
-    );
-}
+const Name = (props: { who: Name }) => (
+    <div className="greeting">
+        Hello <span className="name">{formatName(props.who)}</span>
+    </div>
+);
 
 ReactDOM.render(
-    Name({ who: me }),
+    <Name who={me} />,
     document.getElementById('app-root')
 );
