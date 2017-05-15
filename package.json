@@ -1,0 +1,21 @@
+{
+  "name": "react-bare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --open=public",
+    "build": "rimraf ./public/*.js && tsc"
+  },
+  "author": "Ryan Harvey",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "live-server": "^1.2.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "rimraf": "^2.6.1",
+    "typescript": "^2.3.2"
+  }
+}
